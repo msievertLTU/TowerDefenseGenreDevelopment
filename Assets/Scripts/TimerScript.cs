@@ -23,7 +23,7 @@ public class TimerScript : MonoBehaviour
         time += 1 * Time.deltaTime;
         textValue.text = "TIME: " + time;
 
-        if (time >= 30)
+        if (time >= 60)
         {
             SceneManager.LoadScene("Victory");
         }
