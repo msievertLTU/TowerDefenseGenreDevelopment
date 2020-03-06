@@ -156,9 +156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsPlaced: 0
   audioFX:
-  - {fileID: 8300000, guid: 04c01ddfc1086194aab99c722c24dcd2, type: 3}
-  - {fileID: 8300000, guid: 1b2a28a600e62274b8cda7360e061a1d, type: 3}
-  bulletCooldown: 15
+  - {fileID: 8300000, guid: 9493afd4ce78c8449b34b594f664e65b, type: 3}
+  - {fileID: 8300000, guid: 0a51f4ee330b3e24ba92b7256f9e311e, type: 3}
+  - {fileID: 8300000, guid: fa908f67f1cdb0540aff853c6c6b3502, type: 3}
+  bulletCooldown: 5
   firePoint: {fileID: 7059632161746353181}
   bulletPrefab: {fileID: 221788802507926218, guid: 5beea009b13531b498ae0be916a141d9,
     type: 3}

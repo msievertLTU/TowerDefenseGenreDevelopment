@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    Transform spawnerPosition;
+    public Transform spawnerPosition1;
+    public Transform spawnerPosition2;
+    int spawnNumber;
 
     float spawnTimer = 0;
     public float spawnCooldown = 50;
@@ -14,12 +16,22 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnerPosition = GetComponent<Transform>();
+        //spawnerPosition = GetComponent<Transform>();
+        spawnNumber = 0;
     }
 
     void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, spawnerPosition.position, spawnerPosition.rotation);
+        if (spawnNumber % 2 == 0)
+        {
+            Instantiate(enemyPrefab, spawnerPosition1.position, spawnerPosition1.rotation);
+        }
+        else
+        {
+            Instantiate(enemyPrefab, spawnerPosition2.position, spawnerPosition2.rotation);
+        }
+        spawnNumber += 1;
+        //Instantiate(enemyPrefab, spawnerPosition.position, spawnerPosition.rotation);
     }
 
     // Update is called once per frame

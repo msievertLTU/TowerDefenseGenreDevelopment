@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyPathing : MonoBehaviour
 {
     public Transform target;
-    public float enemySpeed = 10;
+    public float enemySpeed = 1;
     Transform enemy;
 
     void Start()

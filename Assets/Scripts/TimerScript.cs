@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimerScript : MonoBehaviour
 {
@@ -21,5 +22,10 @@ public class TimerScript : MonoBehaviour
     {
         time += 1 * Time.deltaTime;
         textValue.text = "TIME: " + time;
+
+        if (time >= 30)
+        {
+            SceneManager.LoadScene("Victory");
+        }
     }
 }
