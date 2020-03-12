@@ -7,23 +7,26 @@ using UnityEngine.SceneManagement;
 public class TimerScript : MonoBehaviour
 {
     public static TimerScript timer;
-    public float time = 0;
+    public float time;
+    float endGameAtTime = 111f;
     Text textValue;
 
     // Start is called before the first frame update
     void Start()
     {
         timer = this;
+        time = 0;
         textValue = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        time += 1 * Time.deltaTime;
-        textValue.text = "TIME: " + time;
+        time += Time.deltaTime;
+        endGameAtTime -= Time.deltaTime;
+        textValue.text = endGameAtTime.ToString();
 
-        if (time >= 60)
+        if (endGameAtTime <= 0)
         {
             SceneManager.LoadScene("Victory");
         }

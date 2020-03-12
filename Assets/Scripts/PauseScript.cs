@@ -5,10 +5,22 @@ using UnityEngine;
 public class PauseScript : MonoBehaviour
 {
     public bool isPaused;
+    public GameObject pauseUI;
+    float coolDown = 1f;
 
     void Start ()
     {
         isPaused = false;
+        Time.timeScale = 1f;
+    }
+
+    void ChangeActive(bool act)
+    {
+        pauseUI.SetActive(act);
+        //for (int i = 0; i < pauseUI.Length; i++)
+        //{
+        //    pauseUI[i].SetActive(act);
+        //}
     }
 
     public void PauseGame()
@@ -17,18 +29,23 @@ public class PauseScript : MonoBehaviour
         if (isPaused)
         {
             Time.timeScale = 0;
+            ChangeActive(true);
         }
         else
         {
             Time.timeScale = 1;
+            ChangeActive(false);
         }
     }
-    
+
     void Update()
     {
-       if (Input.GetAxis("escape") != 0)
+        coolDown -= Time.deltaTime;
+
+        if (Input.GetAxis("escape") != 0 && coolDown <= 0)
         {
             PauseGame();
+            coolDown = 1f;
         }
     }
 }

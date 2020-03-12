@@ -22,16 +22,19 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        if (spawnNumber % 2 == 0)
+        if (Time.timeScale != 0)
         {
-            Instantiate(enemyPrefab, spawnerPosition1.position, spawnerPosition1.rotation);
+            if (spawnNumber % 2 == 0)
+            {
+                Instantiate(enemyPrefab, spawnerPosition1.position, spawnerPosition1.rotation);
+            }
+            else
+            {
+                Instantiate(enemyPrefab, spawnerPosition2.position, spawnerPosition2.rotation);
+            }
+            spawnNumber += 1;
+            //Instantiate(enemyPrefab, spawnerPosition.position, spawnerPosition.rotation);
         }
-        else
-        {
-            Instantiate(enemyPrefab, spawnerPosition2.position, spawnerPosition2.rotation);
-        }
-        spawnNumber += 1;
-        //Instantiate(enemyPrefab, spawnerPosition.position, spawnerPosition.rotation);
     }
 
     // Update is called once per frame
