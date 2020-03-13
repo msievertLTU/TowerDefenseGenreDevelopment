@@ -24,7 +24,7 @@ public class BulletScript : MonoBehaviour
             if (collision.GetComponent<EnemyHealth>().WillEnemyDie() == true)
             {
                 target = null;
-                PlayerMoneyHandler.Instance.AddCash(50);
+                PlayerMoneyHandler.Instance.AddCash(100);
 
                 if (bullet.tag == "ExplosiveBullet")
                 {

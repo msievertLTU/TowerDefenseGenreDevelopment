@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 5229736244408026997}
   - component: {fileID: 5229736244408026996}
   - component: {fileID: 8701921623645469078}
+  - component: {fileID: 416746454769109902}
   m_Layer: 0
   m_Name: Turrent1Prefab
   m_TagString: Untagged
@@ -369,6 +370,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &416746454769109902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5229736244408026986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c4807c5cbc4d94eb31208703f70767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TowerTimer: 30
 --- !u!1 &5229736244418038401
 GameObject:
   m_ObjectHideFlags: 0
